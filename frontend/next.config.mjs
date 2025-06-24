@@ -1,8 +1,6 @@
-import pkg from '@netlify/next';
-const { withNetlify } = pkg;
+import withNetlify from '@netlify/next';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+export default withNetlify({
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -12,6 +10,4 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-};
-
-export default withNetlify(nextConfig);
+});
